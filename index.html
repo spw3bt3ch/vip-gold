@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VIP GOLD – Free Forex Training Community</title>
+  <meta name="description" content="Join VIP GOLD's exclusive WhatsApp Forex trading community. Get free step-by-step training, live mentorship, and risk management strategies." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet" />
+  <style>
+    * { font-family: 'Inter', sans-serif; }
+
+    /* Animated gradient background */
+    .hero-bg {
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      background-size: 400% 400%;
+      animation: gradientShift 10s ease infinite;
+    }
+    @keyframes gradientShift {
+      0%   { background-position: 0% 50%; }
+      50%  { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Floating blobs */
+    .blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.25;
+      animation: floatBlob 8s ease-in-out infinite;
+    }
+    @keyframes floatBlob {
+      0%, 100% { transform: translateY(0) scale(1); }
+      50%       { transform: translateY(-30px) scale(1.05); }
+    }
+
+    /* Pulse ring on icon */
+    .pulse-ring {
+      animation: pulseRing 2s ease-out infinite;
+    }
+    @keyframes pulseRing {
+      0%   { box-shadow: 0 0 0 0 rgba(251,191,36,0.6); }
+      70%  { box-shadow: 0 0 0 18px rgba(251,191,36,0); }
+      100% { box-shadow: 0 0 0 0 rgba(251,191,36,0); }
+    }
+
+    /* Scroll-reveal */
+    .reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* Gradient text */
+    .gold-text {
+      background: linear-gradient(90deg, #f59e0b, #fbbf24, #fde68a);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* WhatsApp button shimmer */
+    .wa-btn {
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .wa-btn::after {
+      content: '';
+      position: absolute;
+      top: -50%; left: -75%;
+      width: 50%; height: 200%;
+      background: rgba(255,255,255,0.15);
+      transform: skewX(-20deg);
+      transition: left 0.5s ease;
+    }
+    .wa-btn:hover::after { left: 130%; }
+    .wa-btn:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(37,211,102,0.5); }
+
+    /* Card hover */
+    .benefit-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .benefit-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(251,191,36,0.15); }
+
+    /* Step circle */
+    .step-circle {
+      background: linear-gradient(135deg, #f59e0b, #d97706);
+      box-shadow: 0 6px 20px rgba(245,158,11,0.4);
+    }
+
+    /* Testimonial card */
+    .testi-card { backdrop-filter: blur(12px); background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); }
+
+    /* Stars */
+    .stars::before { content: '★★★★★'; color: #f59e0b; font-size: 1.1rem; letter-spacing: 2px; }
+
+    /* Number ticker */
+    .stat-num { font-size: 2.5rem; font-weight: 900; }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #0f0c29; }
+    ::-webkit-scrollbar-thumb { background: #f59e0b; border-radius: 3px; }
+
+    /* Ticker tape */
+    .ticker-wrap { overflow: hidden; background: rgba(245,158,11,0.1); border-top: 1px solid rgba(245,158,11,0.2); border-bottom: 1px solid rgba(245,158,11,0.2); }
+    .ticker-inner { display: flex; animation: ticker 25s linear infinite; white-space: nowrap; }
+    @keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+  </style>
+</head>
+<body class="bg-gray-950 text-white overflow-x-hidden">
+
+<!-- ═══════════════════════ NAVBAR ═══════════════════════ -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-gray-950/80 backdrop-blur-md border-b border-yellow-500/20 px-4 py-3">
+  <div class="max-w-6xl mx-auto flex items-center justify-between">
+    <div class="flex items-center gap-2">
+      <div class="w-8 h-8 rounded-full bg-gradient-to-br from-yellow-400 to-yellow-600 flex items-center justify-center text-black font-black text-sm">V</div>
+      <span class="font-black text-lg tracking-wide gold-text">VIP GOLD</span>
+    </div>
+    <div class="hidden md:flex gap-5 text-sm text-gray-300">
+      <a href="#benefits" class="hover:text-yellow-400 transition">Benefits</a>
+      <a href="#how-it-works" class="hover:text-yellow-400 transition">How It Works</a>
+      <a href="#testimonials" class="hover:text-yellow-400 transition">Testimonials</a>
+    </div>
+    <a href="https://chat.whatsapp.com/BTRXNVqnYfk1K6Ydoxt9nP?mode=gi_t" target="_blank" rel="noopener noreferrer"
+       class="wa-btn bg-green-500 hover:bg-green-400 text-white text-xs md:text-sm font-bold px-4 py-2 rounded-full">
+      Join Free →
+    </a>
+  </div>
+</nav>
+
+<!-- ═══════════════════════ HERO ═══════════════════════ -->
+<section class="hero-bg relative min-h-screen flex flex-col items-center justify-center text-center px-4 pt-20 pb-16 overflow-hidden">
+  <!-- Blobs -->
+  <div class="blob w-96 h-96 bg-yellow-400 top-10 -left-32"></div>
+  <div class="blob w-72 h-72 bg-purple-600 bottom-20 -right-20" style="animation-delay:3s"></div>
+  <div class="blob w-56 h-56 bg-green-500 top-1/2 right-8" style="animation-delay:5s"></div>
+
+  <!-- Forex ticker tape -->
+  <div class="ticker-wrap w-full absolute top-16 py-2">
+    <div class="ticker-inner">
+      <span class="text-yellow-400/70 text-xs font-mono mr-12">EUR/USD ▲ 1.0845</span>
+      <span class="text-green-400/70 text-xs font-mono mr-12">GBP/JPY ▲ 192.35</span>
+      <span class="text-red-400/70 text-xs font-mono mr-12">XAU/USD ▼ 2024.50</span>
+      <span class="text-yellow-400/70 text-xs font-mono mr-12">BTC/USD ▲ 68,420</span>
+      <span class="text-green-400/70 text-xs font-mono mr-12">AUD/USD ▲ 0.6523</span>
+      <span class="text-yellow-400/70 text-xs font-mono mr-12">EUR/USD ▲ 1.0845</span>
+      <span class="text-green-400/70 text-xs font-mono mr-12">GBP/JPY ▲ 192.35</span>
+      <span class="text-red-400/70 text-xs font-mono mr-12">XAU/USD ▼ 2024.50</span>
+      <span class="text-yellow-400/70 text-xs font-mono mr-12">BTC/USD ▲ 68,420</span>
+      <span class="text-green-400/70 text-xs font-mono mr-12">AUD/USD ▲ 0.6523</span>
+    </div>
+  </div>
+
+  <!-- Main hero content -->
+  <div class="relative z-10 max-w-4xl mx-auto mt-10">
+    <!-- Badge -->
+    <div class="inline-flex items-center gap-2 bg-yellow-500/10 border border-yellow-500/30 rounded-full px-4 py-1.5 mb-6 text-yellow-400 text-sm font-semibold">
+      <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+      100% Free · No Credit Card · No Catch
+    </div>
+
+    <h1 class="text-4xl md:text-6xl lg:text-7xl font-black leading-tight mb-6">
+      Master Forex Trading<br/>
+      <span class="gold-text">Without Spending a Dime</span>
+    </h1>
+    <p class="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
+      Step-by-step training, live mentorship, and a community of traders – all for <strong class="text-yellow-400">free</strong>. Join thousands already growing their portfolios.
+    </p>
+
+    <!-- Chart icon -->
+    <div class="flex justify-center mb-10">
+      <div class="pulse-ring w-24 h-24 rounded-full bg-yellow-500/10 border-2 border-yellow-500/40 flex items-center justify-center text-5xl">
+        📈
+      </div>
+    </div>
+
+    <!-- CTA Buttons -->
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="https://chat.whatsapp.com/BTRXNVqnYfk1K6Ydoxt9nP?mode=gi_t" target="_blank" rel="noopener noreferrer"
+         class="wa-btn bg-green-500 hover:bg-green-400 text-white font-bold px-8 py-4 rounded-2xl text-lg flex items-center justify-center gap-2">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Join Group 1
+      </a>
+      <a href="https://chat.whatsapp.com/HvnaXR4bBBS3317YLniB7p?mode=gi_t" target="_blank" rel="noopener noreferrer"
+         class="wa-btn bg-gradient-to-r from-yellow-500 to-yellow-400 hover:from-yellow-400 hover:to-yellow-300 text-black font-bold px-8 py-4 rounded-2xl text-lg flex items-center justify-center gap-2">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Join Group 2
+      </a>
+    </div>
+
+    <p class="text-gray-500 text-sm mt-5">🔒 No spam. No fees. Just pure Forex education.</p>
+  </div>
+
+  <!-- Stats bar -->
+  <div class="relative z-10 mt-16 grid grid-cols-3 gap-6 max-w-2xl mx-auto w-full">
+    <div class="text-center">
+      <div class="stat-num gold-text" data-target="5000">0</div>
+      <div class="text-gray-400 text-xs mt-1">Members Trained</div>
+    </div>
+    <div class="text-center border-x border-yellow-500/20">
+      <div class="stat-num gold-text" data-target="100">0</div>
+      <div class="text-gray-400 text-xs mt-1">% Free Forever</div>
+    </div>
+    <div class="text-center">
+      <div class="stat-num gold-text" data-target="24">0</div>
+      <div class="text-gray-400 text-xs mt-1">/ 7 Support</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ BENEFITS ═══════════════════════ -->
+<section id="benefits" class="py-24 px-4 bg-gray-950">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-16 reveal">
+      <span class="text-yellow-400 text-sm font-semibold uppercase tracking-widest">Why Join Us?</span>
+      <h2 class="text-3xl md:text-5xl font-black mt-2">Everything You Need to <span class="gold-text">Succeed</span></h2>
+      <p class="text-gray-400 mt-4 max-w-xl mx-auto">No hidden costs. No gatekeeping. Just actionable Forex knowledge delivered straight to your WhatsApp.</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Card 1 -->
+      <div class="benefit-card reveal bg-gradient-to-br from-gray-900 to-gray-800 border border-yellow-500/15 rounded-2xl p-6">
+        <div class="text-4xl mb-4">🎯</div>
+        <h3 class="font-bold text-lg text-yellow-400 mb-2">Beginner-Friendly Strategies</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">Zero experience? No problem. We start from the very basics and take you to advanced level trading setups.</p>
+      </div>
+      <!-- Card 2 -->
+      <div class="benefit-card reveal bg-gradient-to-br from-gray-900 to-gray-800 border border-yellow-500/15 rounded-2xl p-6" style="transition-delay:0.1s">
+        <div class="text-4xl mb-4">🧑‍🏫</div>
+        <h3 class="font-bold text-lg text-yellow-400 mb-2">Live Mentorship & Guidance</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">Get real-time answers from experienced traders. Learn from people who trade profitably every day.</p>
+      </div>
+      <!-- Card 3 -->
+      <div class="benefit-card reveal bg-gradient-to-br from-gray-900 to-gray-800 border border-yellow-500/15 rounded-2xl p-6" style="transition-delay:0.2s">
+        <div class="text-4xl mb-4">🛡️</div>
+        <h3 class="font-bold text-lg text-yellow-400 mb-2">Risk Management Techniques</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">Protect your capital with proven risk management rules. Trade confidently without blowing your account.</p>
+      </div>
+      <!-- Card 4 -->
+      <div class="benefit-card reveal bg-gradient-to-br from-gray-900 to-gray-800 border border-yellow-500/15 rounded-2xl p-6" style="transition-delay:0.3s">
+        <div class="text-4xl mb-4">🏆</div>
+        <h3 class="font-bold text-lg text-yellow-400 mb-2">Private Community Access</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">Join an exclusive group of like-minded traders. Share wins, learn from losses, and grow together.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ HOW IT WORKS ═══════════════════════ -->
+<section id="how-it-works" class="py-24 px-4 bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950 relative overflow-hidden">
+  <div class="blob w-80 h-80 bg-yellow-500 top-10 -right-40 opacity-10"></div>
+  <div class="max-w-4xl mx-auto text-center">
+    <div class="reveal">
+      <span class="text-yellow-400 text-sm font-semibold uppercase tracking-widest">Simple Process</span>
+      <h2 class="text-3xl md:text-5xl font-black mt-2 mb-4">Start in <span class="gold-text">3 Easy Steps</span></h2>
+      <p class="text-gray-400 max-w-lg mx-auto mb-16">No complicated sign-ups. No fees. Just three simple steps between you and free Forex education.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+      <!-- Connector line (desktop) -->
+      <div class="hidden md:block absolute top-10 left-1/4 right-1/4 h-0.5 bg-gradient-to-r from-yellow-500/30 to-yellow-500/30" style="width:50%;left:25%"></div>
+
+      <!-- Step 1 -->
+      <div class="reveal flex flex-col items-center text-center">
+        <div class="step-circle w-20 h-20 rounded-full flex items-center justify-center text-3xl mb-4 relative z-10">🔗</div>
+        <div class="bg-yellow-500 text-black text-xs font-black px-2 py-0.5 rounded-full mb-3">STEP 1</div>
+        <h3 class="font-bold text-lg mb-2">Click the Group Link</h3>
+        <p class="text-gray-400 text-sm">Pick either of the two WhatsApp group links below. Both give you full access to all training content.</p>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="reveal flex flex-col items-center text-center" style="transition-delay:0.15s">
+        <div class="step-circle w-20 h-20 rounded-full flex items-center justify-center text-3xl mb-4 relative z-10">✅</div>
+        <div class="bg-yellow-500 text-black text-xs font-black px-2 py-0.5 rounded-full mb-3">STEP 2</div>
+        <h3 class="font-bold text-lg mb-2">Join the Community</h3>
+        <p class="text-gray-400 text-sm">WhatsApp will ask you to join. Tap "Join Group". You're instantly welcomed into the VIP GOLD family.</p>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="reveal flex flex-col items-center text-center" style="transition-delay:0.3s">
+        <div class="step-circle w-20 h-20 rounded-full flex items-center justify-center text-3xl mb-4 relative z-10">🚀</div>
+        <div class="bg-yellow-500 text-black text-xs font-black px-2 py-0.5 rounded-full mb-3">STEP 3</div>
+        <h3 class="font-bold text-lg mb-2">Start Learning for Free</h3>
+        <p class="text-gray-400 text-sm">Access live signals, daily lessons, mentorship sessions, and chart analysis — all totally free.</p>
+      </div>
+    </div>
+
+    <div class="reveal mt-14 flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="https://chat.whatsapp.com/BTRXNVqnYfk1K6Ydoxt9nP?mode=gi_t" target="_blank" rel="noopener noreferrer"
+         class="wa-btn bg-green-500 hover:bg-green-400 text-white font-bold px-8 py-4 rounded-2xl flex items-center justify-center gap-2">
+        📱 Group 1 – Join Now
+      </a>
+      <a href="https://chat.whatsapp.com/HvnaXR4bBBS3317YLniB7p?mode=gi_t" target="_blank" rel="noopener noreferrer"
+         class="wa-btn bg-gradient-to-r from-yellow-500 to-yellow-400 hover:from-yellow-400 hover:to-yellow-300 text-black font-bold px-8 py-4 rounded-2xl flex items-center justify-center gap-2">
+        📱 Group 2 – Join Now
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ TESTIMONIALS ═══════════════════════ -->
+<section id="testimonials" class="py-24 px-4 bg-gray-950">
+  <div class="max-w-5xl mx-auto">
+    <div class="text-center mb-16 reveal">
+      <span class="text-yellow-400 text-sm font-semibold uppercase tracking-widest">Real Members, Real Results</span>
+      <h2 class="text-3xl md:text-5xl font-black mt-2">What Our <span class="gold-text">Traders Say</span></h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Testimonial 1 -->
+      <div class="testi-card reveal rounded-2xl p-6">
+        <div class="stars mb-3"></div>
+        <p class="text-gray-300 text-sm leading-relaxed mb-5">"I went from knowing NOTHING about Forex to making consistent profits in just 3 months — all from what I learned in this free WhatsApp group. Absolutely mind-blowing!"</p>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center font-black text-black">A</div>
+          <div>
+            <div class="font-semibold text-sm">Amara O.</div>
+            <div class="text-gray-500 text-xs">Lagos, Nigeria</div>
+          </div>
+        </div>
+      </div>
+      <!-- Testimonial 2 -->
+      <div class="testi-card reveal rounded-2xl p-6" style="transition-delay:0.15s">
+        <div class="stars mb-3"></div>
+        <p class="text-gray-300 text-sm leading-relaxed mb-5">"The live mentorship is unbelievable for a FREE group. The coaches actually respond and break down every trade. I've recommended this to all my friends."</p>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-gradient-to-br from-purple-400 to-pink-500 flex items-center justify-center font-black text-black">K</div>
+          <div>
+            <div class="font-semibold text-sm">Kofi M.</div>
+            <div class="text-gray-500 text-xs">Accra, Ghana</div>
+          </div>
+        </div>
+      </div>
+      <!-- Testimonial 3 -->
+      <div class="testi-card reveal rounded-2xl p-6" style="transition-delay:0.3s">
+        <div class="stars mb-3"></div>
+        <p class="text-gray-300 text-sm leading-relaxed mb-5">"I tried paid Forex courses before but none were as clear, practical, and helpful as VIP GOLD's free training. The risk management lessons alone saved my account!"</p>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-gradient-to-br from-green-400 to-teal-500 flex items-center justify-center font-black text-black">F</div>
+          <div>
+            <div class="font-semibold text-sm">Fatima A.</div>
+            <div class="text-gray-500 text-xs">Abuja, Nigeria</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ FINAL CTA ═══════════════════════ -->
+<section class="py-24 px-4 relative overflow-hidden">
+  <!-- Gradient backdrop -->
+  <div class="absolute inset-0 bg-gradient-to-br from-yellow-600/10 via-gray-900 to-green-600/10"></div>
+  <div class="blob w-96 h-96 bg-yellow-400 -top-20 -left-20 opacity-10"></div>
+  <div class="blob w-72 h-72 bg-green-500 -bottom-20 -right-20 opacity-10"></div>
+
+  <div class="relative z-10 max-w-3xl mx-auto text-center reveal">
+    <div class="text-6xl mb-6">💰</div>
+    <h2 class="text-4xl md:text-6xl font-black mb-4">
+      Ready to Start Your<br/><span class="gold-text">Forex Journey?</span>
+    </h2>
+    <p class="text-gray-300 text-lg mb-10 max-w-xl mx-auto">
+      Join thousands of traders who are already learning and earning. It's completely free — and it takes less than 10 seconds to join.
+    </p>
+
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="https://chat.whatsapp.com/BTRXNVqnYfk1K6Ydoxt9nP?mode=gi_t" target="_blank" rel="noopener noreferrer"
+         class="wa-btn bg-green-500 hover:bg-green-400 text-white font-black px-10 py-5 rounded-2xl text-xl flex items-center justify-center gap-3 shadow-xl shadow-green-500/30">
+        <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Join Group 1 – Free
+      </a>
+      <a href="https://chat.whatsapp.com/HvnaXR4bBBS3317YLniB7p?mode=gi_t" target="_blank" rel="noopener noreferrer"
+         class="wa-btn bg-gradient-to-r from-yellow-500 to-amber-400 hover:from-yellow-400 hover:to-amber-300 text-black font-black px-10 py-5 rounded-2xl text-xl flex items-center justify-center gap-3 shadow-xl shadow-yellow-500/30">
+        <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Join Group 2 – Free
+      </a>
+    </div>
+    <p class="text-gray-500 text-sm mt-6">⚡ Limited spots available — join before we close the groups!</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════ FOOTER ═══════════════════════ -->
+<footer class="bg-gray-950 border-t border-yellow-500/10 py-8 px-4 text-center">
+  <div class="max-w-6xl mx-auto">
+    <div class="flex items-center justify-center gap-2 mb-3">
+      <div class="w-7 h-7 rounded-full bg-gradient-to-br from-yellow-400 to-yellow-600 flex items-center justify-center text-black font-black text-xs">V</div>
+      <span class="font-black text-base gold-text tracking-wide">VIP GOLD</span>
+    </div>
+    <p class="text-gray-500 text-sm">Empowering traders with free, world-class Forex education.</p>
+    <p class="text-gray-700 text-xs mt-4">© 2026 VIP GOLD. All rights reserved. · Trading involves risk. Please trade responsibly.</p>
+  </div>
+</footer>
+
+<!-- ═══════════════════════ JAVASCRIPT ═══════════════════════ -->
+<script>
+  // ── Scroll Reveal ──
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => observer.observe(el));
+
+  // ── Counter animation ──
+  const counters = document.querySelectorAll('[data-target]');
+  const countObs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const el = entry.target;
+      const target = +el.dataset.target;
+      const suffix = el.nextElementSibling?.textContent.includes('%') ? '%' : target === 24 ? '/7' : '+';
+      let cur = 0;
+      const step = Math.ceil(target / 60);
+      const timer = setInterval(() => {
+        cur = Math.min(cur + step, target);
+        el.textContent = cur.toLocaleString() + (target === 5000 ? '+' : '');
+        if (cur >= target) clearInterval(timer);
+      }, 25);
+      countObs.unobserve(el);
+    });
+  }, { threshold: 0.5 });
+  counters.forEach(c => countObs.observe(c));
+
+  // ── Smooth scroll for nav links ──
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+
+  // ── Navbar scroll style ──
+  const nav = document.querySelector('nav');
+  window.addEventListener('scroll', () => {
+    nav.style.background = window.scrollY > 50 ? 'rgba(3,7,18,0.95)' : 'rgba(3,7,18,0.8)';
+  });
+
+  // ── Button click ripple ──
+  document.querySelectorAll('.wa-btn').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      const ripple = document.createElement('span');
+      const rect = this.getBoundingClientRect();
+      ripple.style.cssText = `
+        position:absolute; border-radius:50%; background:rgba(255,255,255,0.3);
+        width:10px; height:10px; transform:scale(0);
+        left:${e.clientX - rect.left - 5}px; top:${e.clientY - rect.top - 5}px;
+        animation: rippleAnim 0.6s ease-out forwards; pointer-events:none;
+      `;
+      this.appendChild(ripple);
+      setTimeout(() => ripple.remove(), 700);
+    });
+  });
+
+  // Ripple keyframe
+  const style = document.createElement('style');
+  style.textContent = `@keyframes rippleAnim { to { transform:scale(30); opacity:0; } }`;
+  document.head.appendChild(style);
+</script>
+</body>
+</html>
